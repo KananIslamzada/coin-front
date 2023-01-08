@@ -1,0 +1,9 @@
+.header {
+  min-height: 80px;
+  padding: 4% 0 0 6%;
+}
+
+.logo > h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+}

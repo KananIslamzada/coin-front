@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: min(600px, 90%);
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+
+.form > label {
+  margin-top: 0.5rem;
+}
+
+.form > button {
+  margin-top: 1rem;
+  max-width: 5rem;
+  margin-inline: auto;
+}
+
+.form > h2 {
+  margin-top: 1rem;
+}

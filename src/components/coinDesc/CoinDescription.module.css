@@ -1,0 +1,40 @@
+.descContainer {
+  flex: 1;
+  background: rgba(196, 196, 196, 0.5);
+  padding: 1.5rem 3rem;
+}
+
+.descContainer > h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.descContainer > p {
+  font-size: 1rem;
+  line-height: 125%;
+  margin-top: 1rem;
+}
+
+.table {
+  margin-top: 1.5rem;
+  margin-inline: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td {
+  padding: 0.3rem;
+  width: 50%;
+  border: 1px solid rgb(226, 226, 226);
+  font-weight: 400;
+}
+
+.table tr:nth-child(2n + 1) {
+  background-color: white;
+}
+
+.descContainer > a {
+  display: block;
+  margin-top: 1rem;
+  color: black;
+}

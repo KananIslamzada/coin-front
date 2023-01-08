@@ -1,0 +1,10 @@
+.container {
+  width: min(1000px, 90%);
+  min-height: 100vh;
+  margin-inline: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(40px, 10%, 60px);
+}

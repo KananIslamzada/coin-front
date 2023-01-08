@@ -1,0 +1,17 @@
+.inputField {
+  margin-top: 1rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  margin-top: 0.5rem;
+}
+
+.inputContainer > input {
+  font-size: 1rem;
+  min-height: 2em;
+  width: 20%;
+  min-width: 10rem;
+}

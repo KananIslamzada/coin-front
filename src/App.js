@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { lazy, Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Loader from "./components/UI/Loader";
+import "./styles.css";
 
-function App() {
+const MainPage = lazy(() => import("./pages/MainPage"));
+const AdminPage = lazy(() => import("./pages/AdminPage"));
+const CategoriesPage = lazy(() => import("./pages/CategoriesPage"));
+const CoinPage = lazy(() => import("./pages/CoinPage"));
+const SearchPage = lazy(() => import("./pages/SearchPage"));
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/categories/:name" element={<CategoriesPage />} />
+          <Route path="/search" element={<SearchPage />} />
+        </Route>
+        <Route path="/coin/:id" element={<CoinPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+      </Routes>
+    </Suspense>
   );
 }
-
-export default App;
